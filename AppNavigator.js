@@ -10,6 +10,15 @@ import Profile from './Profile/Profile';
 
 
 const AppTabNavigator = createMaterialTopTabNavigator({
+    Profile: {
+      screen: Profile,
+      navigationOptions: {
+        tabBarLabel: 'Profile',
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="md-person" color={tintColor} size={24} />
+        )
+      }
+    },
     Planner: {
       screen: Planner,
       navigationOptions: {
@@ -27,17 +36,8 @@ const AppTabNavigator = createMaterialTopTabNavigator({
           <Icon name="md-calendar" color={tintColor} size={24} />
         )
       }
-    },
-    Profile: {
-      screen: Profile,
-      navigationOptions: {
-        tabBarLabel: 'Profile',
-        tabBarIcon: ({ tintColor }) => (
-          <Icon name="md-person" color={tintColor} size={24} />
-        )
-      }
     }
-    }, 
+    },     
     {
       initialRouteName: 'Planner',
       tabBarPosition: 'bottom',
