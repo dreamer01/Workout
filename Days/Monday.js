@@ -7,12 +7,13 @@ import { Icon, Button } from 'react-native-elements'
 import NewItem from '../Cards/newItem'
 import DietCard  from "../Cards/dietCard";
 import WorkOut  from "../Cards/workoutCard";
+import AddPrompt from '../Cards/addPrompt'
 
 export default class Monday extends Component{
 
     constructor(){
         super();
-        this.state = {fontLoaded: false, modalVisible: false, type:null, cards:[],activeType:true};
+        this.state = {fontLoaded: false, modalVisible: false, type:null, cards:[]};
         this.togglePrompt = this.togglePrompt.bind(this);
         this.addCard = this.addCard.bind(this);
         this.updateStatus = this.updateStatus.bind(this);
@@ -35,33 +36,19 @@ export default class Monday extends Component{
         this.state.modalVisible ? this.setState({modalVisible:false}) : this.setState({modalVisible:true,type:'workout',name:null,details:null});
     }
 
-    addCard(){
+    addCard(itemObj){
+        //Closing the Modal.
         this.state.modalVisible ? this.setState({modalVisible:false}) : this.setState({modalVisible:true});
-        if(this.state.name!= null)
-            this.state.cards.push(
-                <NewItem key={this.state.name} type={this.state.type} name={this.state.name} 
-                details={this.state.details} status={false} checkStatus={this.updateStatus} />)
+
+        //Adding New Card Details.
+        if(itemObj.name!= null)
+            this.state.cards.push( itemObj); 
         console.log(this.state.cards);
     }
 
     updateStatus(name){
-        console.log("Change status of "+name);
-        metacards=this.state.cards.map(card => card.props);
-        console.log(metacards);
-
-        for (var i in metacards){
-            if(metacards[i].name==name){
-                if(metacards[i].status)
-                    metacards[i].status=false;
-                else{
-                    console.log( metacards[i].status)
-                    metacards[i].status= true;
-                    console.log( metacards[i].status)
-                }
-            }                
-        }
-        console.log(metacards);
-
+        this.state.cards.map(card => card.name=== name ? card.status= !card.status : card.status= card.status )
+        console.log(this.state.cards);
     }
 
     render(){
@@ -93,76 +80,21 @@ export default class Monday extends Component{
                                 visible={this.state.modalVisible}
                                 onRequestClose={() => this.togglePrompt()}
                                 > 
-                                <View style={{flex:1, justifyContent: 'center', alignItems: 'center' , backgroundColor:'#E9D9F2'}}>
-                                    <View style={styles.prompt}>
 
-                                        <View style={{flexDirection: 'row'}} >
-
-                                            <Icon
-                                            raised
-                                            reverse= {this.state.activeType}
-                                            name='md-bicycle'
-                                            type='ionicon'
-                                            color='#8594D6'
-                                            size= {25}
-                                            onPress={() =>this.setState({type:'workout',activeType:true})} 
-                                            />
-
-                                            <Icon
-                                            raised
-                                            reverse= {!this.state.activeType}
-                                            name='md-restaurant'
-                                            type='ionicon'
-                                            color='#8594D6'
-                                            size = {25}
-                                            onPress={() =>this.setState({type:'diet',activeType:false})} 
-                                            />
-
-                                        </View>
-
-                                        <TextInput
-                                        style={{width: 200, height: 50, padding: 10 , marginTop:10, color:'#fff'}}
-                                        onChangeText ={(text)=> this.setState({name:text})}
-                                        placeholder="Name"
-                                        />
-                                        <TextInput
-                                        style={{width: 200, height: 50 , padding: 10 , marginTop:10, color:'#fff'}}
-                                        onChangeText ={(text)=> this.setState({details:text})}
-                                        placeholder="Details"
-                                        />
-                                        <View style={{flexDirection: 'row'}} >
-                                            <Button
-                                            buttonStyle={{height:35,
-                                                width: 100, 
-                                                backgroundColor:"#C3614B",
-                                                borderColor: "transparent",
-                                                borderWidth: 0,
-                                                borderRadius: 5,
-                                                marginTop: 10}}
-                                            onPress={() => this.togglePrompt()}
-                                            title="Cancel"
-                                            />
-
-                                            <Button
-                                            buttonStyle={{height:35, 
-                                                width: 100, 
-                                                backgroundColor:"#96D581",
-                                                borderColor: "transparent",
-                                                borderWidth: 0,
-                                                borderRadius: 5,
-                                                marginTop: 10}}
-                                            onPress={() => this.addCard()}
-                                            title="Add"
-                                            />
-                                        </View>
-                                    </View>
-                                </View>
+                                <AddPrompt add={this.addCard} close={this.togglePrompt} />                                
 
                             </Modal>
 
                             <ScrollView showsVerticalScrollIndicator={false} >
                                 <DietCard name="First Bite" details="Banana" />
-                                {this.state.cards}
+                                {
+                                    this.state.cards.map( item => 
+                                    <NewItem key={item.name} 
+                                        type={item.type} name={item.name} 
+                                        details={item.details} status={false} 
+                                        checkStatus={this.updateStatus} />   
+                                    )
+                                }
                             </ScrollView>
                         </View>
                         
