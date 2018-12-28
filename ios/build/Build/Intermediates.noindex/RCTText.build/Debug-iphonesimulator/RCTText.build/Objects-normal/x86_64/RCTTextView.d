@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/node_modules/react-native/Libraries/Text/Text/RCTTextView.m \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/node_modules/react-native/Libraries/Text/Text/RCTTextView.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/node_modules/react-native/Libraries/Text/Text/RCTTextShadowView.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextShadowView.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/node_modules/react-native/Libraries/Text/RCTTextAttributes.h \
+  /Users/pushpendrasingh/Documents/Workspace/Learning/Practise/Workout/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h

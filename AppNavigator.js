@@ -1,19 +1,21 @@
-
 import React, { Component } from "react";
 //import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
-import { createMaterialTopTabNavigator , createStackNavigator} from 'react-navigation'
-import Icon from 'react-native-vector-icons/Ionicons'
+import {
+  createMaterialTopTabNavigator,
+  createStackNavigator
+} from "react-navigation";
+import Icon from "react-native-vector-icons/Ionicons";
 
-import Planner from './Planner/Planner';
-import MyCalendar from './Calendar/Calendar';
-import Profile from './Profile/Profile';
+import Planner from "./components/Planner";
+import MyCalendar from "./components/Calendar";
+import Profile from "./components/Profile";
 
-
-const AppTabNavigator = createMaterialTopTabNavigator({
+const AppTabNavigator = createMaterialTopTabNavigator(
+  {
     Profile: {
       screen: Profile,
       navigationOptions: {
-        tabBarLabel: 'Profile',
+        tabBarLabel: "Profile",
         tabBarIcon: ({ tintColor }) => (
           <Icon name="md-person" color={tintColor} size={24} />
         )
@@ -22,7 +24,7 @@ const AppTabNavigator = createMaterialTopTabNavigator({
     Planner: {
       screen: Planner,
       navigationOptions: {
-        tabBarLabel: 'Planner',
+        tabBarLabel: "Planner",
         tabBarIcon: ({ tintColor }) => (
           <Icon name="md-clipboard" color={tintColor} size={24} />
         )
@@ -31,34 +33,33 @@ const AppTabNavigator = createMaterialTopTabNavigator({
     Calendar: {
       screen: MyCalendar,
       navigationOptions: {
-        tabBarLabel: 'Calendar',
+        tabBarLabel: "Calendar",
         tabBarIcon: ({ tintColor }) => (
           <Icon name="md-calendar" color={tintColor} size={24} />
         )
       }
     }
-    },     
-    {
-      initialRouteName: 'Planner',
-      tabBarPosition: 'bottom',
-      swipeEnabled: true,
-      animationEnabled: false,
-      tabBarOptions: {
-        activeTintColor: '#52e2ab',
-        inactiveTintColor: '#696372',
-        showLabel:false ,
-        showIcon: true,
-        style: {
-          backgroundColor: '#181320',
-          //borderTopWidth: 0.5,
-          //borderTopColor: 'grey'
-        },
-        indicatorStyle: {
-          height: 0
-        }
+  },
+  {
+    initialRouteName: "Planner",
+    tabBarPosition: "bottom",
+    swipeEnabled: false,
+    animationEnabled: false,
+    tabBarOptions: {
+      activeTintColor: "#52e2ab",
+      inactiveTintColor: "#696372",
+      showLabel: false,
+      showIcon: true,
+      style: {
+        backgroundColor: "#181320"
+        //borderTopWidth: 0.5,
+        //borderTopColor: 'grey'
+      },
+      indicatorStyle: {
+        height: 0
+      }
     }
-  })
-
+  }
+);
 
 export default AppTabNavigator;
-  
