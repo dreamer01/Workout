@@ -1,7 +1,7 @@
-Basic Daily Workout Planner mobile app developed with React Native.
+## Basic Daily Workout Planner mobile app developed with React Native.
  
  
-Features :
-   Daily Planner,
-   Weekly Calendar Tracker,
-   User Profile.
+* Features :
+   * Daily Planner,
+   * Weekly Calendar Tracker,
+   * User Profile.
